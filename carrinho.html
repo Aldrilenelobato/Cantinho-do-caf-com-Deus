@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho - Cafeteria Elegante</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Seu Carrinho</h1>
+            <p>Reveja os seus itens e finalize o pedido</p>
+            <a href="index.html" class="btn">Voltar ao Cardápio</a>
+        </div>
+    </header>
+
+    <section class="carrinho-container">
+        <div id="itens-carrinho">
+            </div>
+
+        <div id="resumo-carrinho" style="display: none;">
+            <div class="carrinho-total">
+                <p>Total: <span id="valor-total">R$ 0,00</span></p>
+            </div>
+            <div class="finalizar-pedido">
+                <button class="btn" onclick="finalizarPedido()">Finalizar Pedido</button>
+            </div>
+        </div>
+
+        <p id="carrinho-vazio" style="text-align: center; margin-top: 20px; display: none;">Seu carrinho está vazio.</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Cafeteria Elegante · Todos os direitos reservados</p>
+    </footer>
+
+    <script src="carrinho.js"></script>
+
+</body>
+</html>

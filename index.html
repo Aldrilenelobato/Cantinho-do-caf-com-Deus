@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafeteria Elegante</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos para as redes sociais */
+        .social-section {
+            background-color: #f5f5f5;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .social-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: #5d4037;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #5d4037;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+        
+        .social-link:hover {
+            background-color: #8d6e63;
+            transform: translateY(-3px);
+        }
+        
+        .social-handle {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #5d4037;
+        }
+        
+        .social-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+        }
+        
+        /* Estilos para o rodapé com redes sociais */
+        footer {
+            background-color: #5d4037;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-social {
+            margin-bottom: 20px;
+        }
+        
+        .footer-social .social-link {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 5px;
+        }
+        
+        .footer-social .social-link:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        
+        <nav class="carrinho-nav-overlay">
+            <a href="carrinho.html" class="nav-link">
+                <i class="fa-solid fa-shopping-cart"></i> Meu Carrinho
+            </a>
+        </nav>
+        
+        <div class="hero-text">
+            <h1>Cafeteria Elegante</h1>
+            <p>O sabor e aroma que encantam</p>
+            <a href="#menu" class="btn">Ver Cardápio</a>
+        </div>
+    </header>
+
+    <section class="about">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma cafeteria artesanal com ambiente acolhedor, onde o café é tratado como arte. Oferecemos sabores únicos, com grãos selecionados e doces fresquinhos todos os dias.</p>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2>Nosso Cardápio</h2>
+        <div class="menu-grid" id="menu-grid">
+        </div>
+    </section>
+
+    <!-- Nova seção de redes sociais -->
+    <section class="social-section">
+        <h2>Siga-nos nas Redes Sociais</h2>
+        <div class="social-links">
+            <div class="social-item">
+                <a href="https://www.instagram.com/cafeteriaelegante" class="social-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <span class="social-handle">@cafeteriaelegante</span>
+            </div>
+            <div class="social-item">
+                <a href="https://www.facebook.com/cafeteriaelegante" class="social-link" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <span class="social-handle">/cafeteriaelegante</span>
+            </div>
+            <div class="social-item">
+                <a href="https://www.twitter.com/cafelegante" class="social-link" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <span class="social-handle">@cafelegante</span>
+            </div>
+            <div class="social-item">
+                <a href="https://wa.me/559191976079" class="social-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <span class="social-handle"></span>
+            </div>
+        </div>
+    </section>
+
+        <script>
+        // Função para carregar os produtos do arquivo JSON e exibir
+        async function carregarProdutos() {
+            try {
+                const response = await fetch('produtos.json');
+                const produtos = await response.json();
+                const menuGrid = document.getElementById('menu-grid');
+                
+                // Limpa qualquer conteúdo pré-existente
+                menuGrid.innerHTML = '';
+
+                // Itera sobre cada produto e cria o card HTML
+                produtos.forEach(produto => {
+                    const cardHtml = `
+                        <a href="produto.html?id=${produto.id}">
+                            <div class="card">
+                                <img src="${produto.imagem}" alt="${produto.nome}">
+                                <h3>${produto.nome} R$ ${produto.preco}</h3>
+                                <p>${produto.descricao}</p>
+                            </div>
+                        </a>
+                    `;
+                    menuGrid.innerHTML += cardHtml;
+                });
+
+            } catch (error) {
+                console.error('Erro ao carregar os produtos:', error);
+            }
+        }
+
+        // Chama a função para carregar os produtos quando a página for totalmente carregada
+        document.addEventListener('DOMContentLoaded', carregarProdutos);
+    </script>
+
+</body>
+</html>

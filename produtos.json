@@ -1,0 +1,86 @@
+[
+  {
+    "id": "expresso",
+    "nome": "Café Expresso",
+    "preco": "3,00",
+    "descricao": "Um clássico intenso e encorpado, direto da máquina.",
+    "imagem": "imagens/cafe preto.jpg"
+  },
+  {
+    "id": "cappuccino",
+    "nome": "Cappuccino",
+    "preco": "7,00",
+    "descricao": "O melhor da cidade",
+    "imagem": "imagens/cappucino-fotoliastock.jpg"
+  },
+  {
+    "id": "paes",
+    "nome": "Pães Quentinhos",
+    "preco": "0,99",
+    "descricao": "",
+    "imagem": "imagens/pães.jpg"
+  },
+  {
+    "id": "mingal-milho",
+    "nome": "Mingau de Milho",
+    "preco": "10,00",
+    "descricao": "",
+    "imagem": "imagens/mingual de milho.jpg"
+  },
+  {
+    "id": "salada-frutas",
+    "nome": "Salada de Frutas",
+    "preco": "10,00",
+    "descricao": "Saudável",
+    "imagem": "imagens/salada de frutas.jpg"
+  },
+  {
+    "id": "bolo",
+    "nome": "Bolo",
+    "preco": "7,00",
+    "descricao": "Bolo delicioso",
+    "imagem": "imagens/bolo deliciosos.jpg"
+  },
+  {
+    "id": "biscoito",
+    "nome": "Biscoito",
+    "preco": "5,00",
+    "descricao": "Os melhores biscoitos",
+    "imagem": "imagens/biscoitos.webp"
+  },
+ {
+    "id": "suco",
+    "nome": "suco de laranja",
+    "preco": "8,00",
+    "descricao": "natural",
+    "imagem": "imagens/suco de laranja.png"
+  },
+  {
+    "id": "doces",
+    "nome": "doces variados",
+    "preco": "3,00",
+    "descricao": "deliciosos",
+    "imagem": "imagens/doces variados.png"
+  },
+  {
+    "id": "bolo de macaxeira",
+    "nome": "bolo de macaxeira",
+    "preco": "10,00",
+    "descricao": "saboroso",
+    "imagem": "imagens/bolo de macaxeira.jpg"
+  },
+  {
+    "id": "salgados",
+    "nome": "canudinhos",
+    "preco": "3,00",
+    "descricao": "crocante",
+    "imagem": "imagens/canudinhos.jpg"
+  },
+ {
+    "id": "coxinhas",
+    "nome": "coxinhas",
+    "preco": "10,00",
+    "descricao": "crocante",
+    "imagem": "imagens/coxinhas.avif"
+  } 
+]
