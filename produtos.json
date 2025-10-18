@@ -89,7 +89,13 @@
     "preco": "10,00",
     "descricao": "saboroso",
     "imagem": "imagens/pudin.jpg"
+  },
+{
+    "id": "pão recheado",
+    "nome": "delicioso",
+    "preco": "10,00",
+    "descricao": "recheio de frango",
+    "imagem": "imagens/pão caseiro com recheio em cima.jpg"
   }
-
 ]
   
