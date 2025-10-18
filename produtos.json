@@ -82,5 +82,14 @@
     "preco": "10,00",
     "descricao": "crocante",
     "imagem": "imagens/coxinhas.avif"
-  } 
+  },
+ {
+    "id": "pudin",
+    "nome": "pudin cremoso",
+    "preco": "10,00",
+    "descricao": "saboroso",
+    "imagem": "imagens/pudin.jpg"
+  }
+
 ]
+  
